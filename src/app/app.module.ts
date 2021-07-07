@@ -18,6 +18,7 @@ import { McalizziLinechartComponent } from './custom-components/mcalizzi-linecha
 import { AuthGuard } from './guards/auth.guard';
 import { VarToStringPipe } from './pipes/var-to-string.pipe';
 import { BackendRequestService } from './services/backend-request.service';
+import { YouTubePlayerModule } from '@angular/youtube-player'
 
 @NgModule({
   declarations: [
@@ -39,25 +40,8 @@ import { BackendRequestService } from './services/backend-request.service';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    YouTubePlayerModule,
     RouterModule.forRoot([
-      {
-        path: 'signup', 
-        component: SignupComponent, 
-      },
-      {
-        path: 'login', 
-        component: LoginComponent, 
-      },
-      {
-        path: 'budgetTool', 
-        component: BudgetToolComponent,
-        canActivate: [AuthGuard],
-      },
-      {
-        path: 'homeInfo', 
-        component: HomeInfoComponent,
-        canActivate: [AuthGuard],
-      },
       {
         path: '', 
         component: HomeComponent, 
